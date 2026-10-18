@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cheese Platter — Bollywood Pickup Lines for Your Date</title>
-<meta name="description" content="Cheese Platter serves 100+ cheesy Bollywood pickup lines and filmy dialogues — with exactly when to use them on a date. Tap “Find My Cheese” and flirt like it's a Yash Raj film.">
+<meta name="description" content="Cheese Platter serves 100+ cheesy Bollywood pickup lines and filmy dialogues — with exactly when to use them on a date. Tap Find My Cheese and flirt like it's a Yash Raj film.">
 <meta name="keywords" content="Bollywood pickup lines, filmy dialogues, Hindi pickup lines, Hinglish flirting lines, Bollywood dialogues for date, cheesy pickup lines, SRK dialogues, romantic Bollywood lines">
 <meta name="author" content="Vinita Mathreja">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#2d0f22">
+<meta name="theme-color" content="#f4ebdc">
 <link rel="canonical" href="https://cheese-platter.vercel.app/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cheese Platter">
 <meta property="og:title" content="Cheese Platter — Bollywood Pickup Lines for Your Date">
-<meta property="og:description" content="Tu cheez badi hai mast mast. Tap “Find My Cheese” for a filmy Bollywood line — and exactly when to drop it on your date.">
+<meta property="og:description" content="Tu cheez badi hai mast mast. Tap Find My Cheese for a filmy Bollywood line — and exactly when to drop it on your date.">
 <meta property="og:url" content="https://cheese-platter.vercel.app/">
 <meta property="og:image" content="https://cheese-platter.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 <meta property="og:image:alt" content="Cheese Platter — Bollywood pickup lines for your date">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cheese Platter — Bollywood Pickup Lines for Your Date">
-<meta name="twitter:description" content="Tap “Find My Cheese” for a filmy Bollywood line — and exactly when to drop it on your date.">
+<meta name="twitter:description" content="Tap Find My Cheese for a filmy Bollywood line — and exactly when to drop it on your date.">
 <meta name="twitter:image" content="https://cheese-platter.vercel.app/og.png">
 
 <script type="application/ld+json">
@@ -46,93 +46,135 @@
 }
 </script>
 
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
-  :root { --bg1:#1a0b17; --bg2:#2d0f22; --card:rgba(255,255,255,.07); --text:#fff5f9; --muted:#ffc2d9; --cheese:#ffc93c; }
+  :root {
+    --paper:#f4ebdc; --paper-hi:#fbf5ea; --ink:#1d1410; --dim:#6b5a4c;
+    --red:#c8102e; --saffron:#f29f05; --teal:#0f6e6e;
+    --display:"Anton",Impact,"Arial Narrow",sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  }
   * { box-sizing:border-box; }
   html { overflow-x:hidden; }
-  body { margin:0; min-height:100vh; font-family:ui-rounded,-apple-system,"Segoe UI",system-ui,sans-serif;
-         background:radial-gradient(120% 90% at 50% 0%, var(--bg2), var(--bg1)) fixed; color:var(--text);
-         display:flex; flex-direction:column; align-items:center; padding:16px; overflow-x:hidden; }
-  main { flex:1; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 0; position:relative; z-index:2; }
-  /* Type scale: title 32 > line 26 > scenario 21 > body 17 > meta 13 */
-  h1 { margin:0 0 20px; font-size:22px; font-weight:800; letter-spacing:-.01em; display:flex; align-items:center; gap:8px; }
-  h1 img { width:1.2em; height:1.2em; }
-  .card { position:relative; width:min(440px,100%); background:var(--card); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-          border:1px solid rgba(255,255,255,.14); border-radius:28px; padding:36px 28px; text-align:center;
-          box-shadow:0 24px 60px rgba(0,0,0,.45); }
-  .title { font-size:clamp(26px,7vw,32px); font-weight:800; line-height:1.15; letter-spacing:-.01em; color:#fff; margin:0; text-wrap:balance; }
-  .result { min-height:200px; display:flex; flex-direction:column; justify-content:center; gap:14px; margin:28px 0; }
-  .line { font-size:26px; line-height:1.3; font-weight:600; margin:0; text-wrap:balance; }
-  .movie { margin:0; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-  .when { margin:0; font-size:21px; line-height:1.4; color:var(--cheese); text-wrap:pretty; }
-  .when:empty, .movie:empty { display:none; }
-  .spinning .line { opacity:.55; filter:blur(.6px); }
-  .spinning .movie, .spinning .when { visibility:hidden; }
-  button { font:inherit; font-weight:700; font-size:17px; border:0; cursor:pointer; padding:15px 32px; border-radius:999px;
-           color:#3d0620; background:linear-gradient(135deg,#ffd0e0,#ff85b3); box-shadow:0 8px 24px rgba(255,77,141,.35);
-           transition:transform .15s ease, opacity .15s; }
-  button:active { transform:scale(.96); }
-  button:disabled { opacity:.7; cursor:progress; }
-  button:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid var(--cheese); outline-offset:3px; }
-  .splash .lede { font-size:17px; line-height:1.5; color:var(--muted); margin:12px 0 28px; }
-  .steps { list-style:none; margin:0 auto 32px; padding:0; display:grid; gap:14px; width:fit-content; text-align:left; font-size:17px; counter-reset:s; }
-  .steps li { display:flex; align-items:center; gap:12px; counter-increment:s; }
-  .steps li::before { content:counter(s); flex:none; width:28px; height:28px; border-radius:50%; display:grid; place-items:center;
-                      font-size:14px; font-weight:800; color:#3d0620; background:var(--cheese); }
-  .steps strong { color:var(--cheese); }
+  body { margin:0; min-height:100vh; background:var(--paper); color:var(--ink); font-family:var(--mono);
+         display:flex; flex-direction:column; align-items:center; overflow-x:hidden; }
+  /* Paper grain */
+  body::after { content:""; position:fixed; inset:0; pointer-events:none; z-index:5; opacity:.06; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  main { flex:1; width:100%; max-width:520px; display:flex; flex-direction:column; justify-content:center; padding:24px 16px 32px; position:relative; z-index:2; }
   [hidden] { display:none !important; }
 
-  details { width:min(720px,100%); margin-top:40px; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:4px 20px; }
-  summary { cursor:pointer; padding:14px 0; font-weight:700; color:var(--muted); }
-  details h2 { font-size:15px; letter-spacing:.08em; text-transform:uppercase; color:var(--cheese); margin:26px 0 8px; }
+  .top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 20px; }
+  .sound { display:flex; align-items:center; gap:8px; }
+  .sound button { font:16px/1 system-ui; padding:6px 8px; background:var(--paper-hi); color:var(--ink); box-shadow:2px 2px 0 var(--ink); }
+  .sound button:active { transform:translate(2px,2px); box-shadow:none; }
+  .sound input { width:84px; accent-color:var(--red); }
+  h1 { margin:0; font:400 26px/1 var(--display); letter-spacing:.02em; text-transform:uppercase; display:flex; align-items:center; gap:10px; }
+  h1 img { width:34px; height:34px; border:2px solid var(--ink); border-radius:8px; }
+
+  /* isolate: keeps the halftone behind the paper even while the card animates */
+  .card { position:relative; isolation:isolate; border-radius:4px; padding:28px 26px 26px; }
+  .card::after { content:""; position:absolute; inset:0; z-index:-1; background:var(--paper-hi); border:2px solid var(--ink); border-radius:4px; }
+  /* Halftone shadow instead of glow */
+  .card::before { content:""; position:absolute; inset:0; transform:translate(10px,10px); z-index:-1; border-radius:4px;
+    background:radial-gradient(var(--red) 1.3px, transparent 1.6px) 0 0/7px 7px; }
+  .tag { display:inline-block; margin:0; padding:5px 10px 4px; background:var(--red); color:var(--paper-hi);
+         font:400 15px/1.1 var(--display); letter-spacing:.06em; text-transform:uppercase; }
+
+  .result { margin:22px 0 24px; min-height:180px; display:flex; flex-direction:column; justify-content:center; }
+  .line { margin:0; font:400 clamp(30px,8vw,40px)/1.12 var(--serif); letter-spacing:-.01em; text-wrap:balance; }
+  .credit { margin:12px 0 0; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); }
+  .credit:empty, .note[hidden] { display:none; }
+  .note { margin:20px 0 0; padding-top:14px; border-top:1px dashed rgba(29,20,16,.35); }
+  .note b { display:block; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); margin-bottom:4px; }
+  .note p { margin:0; font-size:13.5px; line-height:1.55; color:var(--dim); }
+  .meter { display:flex; align-items:center; gap:8px; margin-top:12px; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); }
+  .meter i { display:block; width:10px; height:10px; border:1.5px solid var(--ink); }
+  .meter i.on { background:var(--saffron); }
+
+  .spinning .line { opacity:.4; }
+  .spinning .credit, .spinning .note { visibility:hidden; }
+  .landed { animation:snap .55s cubic-bezier(.34,1.56,.64,1); }
+  @keyframes snap { 0%{transform:translateY(-14px) rotate(-1.5deg)} 100%{transform:none} }
+
+  button { font:400 20px/1 var(--display); letter-spacing:.06em; text-transform:uppercase; cursor:pointer;
+           padding:15px 26px 14px; border:2px solid var(--ink); border-radius:4px; background:var(--red); color:var(--paper-hi);
+           box-shadow:4px 4px 0 var(--ink); transition:transform .08s, box-shadow .08s; }
+  button:active { transform:translate(4px,4px); box-shadow:0 0 0 var(--ink); }
+  button:disabled { cursor:progress; }
+  button:focus-visible, a:focus-visible, summary:focus-visible { outline:3px solid var(--saffron); outline-offset:3px; }
+
+  /* Splash */
+  .splash .title { margin:16px 0 0; font:400 clamp(34px,9vw,46px)/1 var(--display); text-transform:uppercase; letter-spacing:.01em; }
+  .splash .lede { margin:14px 0 22px; font:italic 400 22px/1.3 var(--serif); }
+  .steps { list-style:none; margin:0 0 26px; padding:0; display:grid; gap:12px; font-size:14px; counter-reset:s; }
+  .steps li { display:flex; align-items:center; gap:12px; counter-increment:s; }
+  .steps li::before { content:counter(s); flex:none; width:26px; height:26px; display:grid; place-items:center;
+                      font:400 15px/1 var(--display); color:var(--paper-hi); background:var(--teal); border-radius:50%; }
+
+  details { margin-top:36px; border-top:2px solid var(--ink); }
+  summary { cursor:pointer; padding:14px 0; font:400 18px/1 var(--display); letter-spacing:.04em; text-transform:uppercase; }
+  details h2 { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin:24px 0 6px; }
   details ul { list-style:none; padding:0; margin:0; }
-  details li { padding:10px 0; border-top:1px solid rgba(255,255,255,.07); line-height:1.45; }
-  details li cite { display:block; font-style:normal; font-size:13px; color:var(--cheese); margin-top:2px; }
-  details li small { display:block; font-size:13px; color:var(--muted); opacity:.85; margin-top:2px; }
+  details li { padding:10px 0; border-top:1px dashed rgba(29,20,16,.25); font:400 19px/1.3 var(--serif); }
 
-  footer { position:relative; z-index:2; width:100%; text-align:center; font-size:13px; color:var(--muted); padding:28px 0 8px; }
-  footer nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; }
-  footer a { color:var(--text); }
+  footer { position:relative; z-index:2; width:100%; border-top:1px solid rgba(29,20,16,.2); background:rgba(29,20,16,.03);
+           font-size:11px; letter-spacing:.06em; opacity:.6; padding:12px 16px; }
+  footer:hover, footer:focus-within { opacity:1; }
+  footer nav { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 18px; }
+  footer a { color:inherit; }
 
-  #layer { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:1; }
-  .heart { position:absolute; bottom:-60px; will-change:transform,opacity; }
-  .heart>span { display:block; animation:sway var(--swayDur) ease-in-out infinite; }
-  @keyframes rise {
-    0%{transform:translate3d(0,0,0) rotate(var(--r0)) scale(var(--s));opacity:0}
-    8%{opacity:var(--o)} 85%{opacity:var(--o)}
-    100%{transform:translate3d(var(--drift),calc(-100vh - 120px),0) rotate(var(--r1)) scale(var(--s));opacity:0}
-  }
-  @keyframes sway { 0%,100%{margin-left:calc(var(--sw) * -1)} 50%{margin-left:var(--sw)} }
-  @keyframes burst { 0%{transform:translate3d(0,0,0) scale(.2);opacity:1}
-                     100%{transform:translate3d(var(--bx),var(--by),0) scale(var(--s)) rotate(var(--r1));opacity:0} }
-  @media (prefers-reduced-motion: reduce){ #layer{display:none} }
+  /* Slow, big, mostly-offscreen props — never over the content column */
+  #deco { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+  #deco svg { position:absolute; opacity:.13; }
+  .reel { width:420px; top:-150px; left:-170px; animation:spin 80s linear infinite; }
+  .marigold { width:300px; top:-90px; right:-120px; animation:spin 120s linear infinite reverse; }
+  .wedge { width:340px; bottom:-110px; right:-120px; transform:rotate(-12deg); }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  @media (max-width:1000px){ #deco { display:none; } }
+  @media (prefers-reduced-motion: reduce){ #deco svg, .landed { animation:none; } }
 </style>
 </head>
 <body>
-<div id="layer"></div>
+<div id="deco" aria-hidden="true">
+  <svg class="reel" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#1d1410"/><circle cx="50" cy="50" r="8" fill="#f4ebdc"/><g fill="#f4ebdc"><circle cx="50" cy="22" r="11"/><circle cx="50" cy="78" r="11"/><circle cx="22" cy="50" r="11"/><circle cx="78" cy="50" r="11"/><circle cx="30" cy="30" r="7"/><circle cx="70" cy="70" r="7"/><circle cx="70" cy="30" r="7"/><circle cx="30" cy="70" r="7"/></g></svg>
+  <svg class="marigold" viewBox="0 0 100 100"><g fill="#f29f05"><circle cx="50" cy="20" r="16"/><circle cx="50" cy="80" r="16"/><circle cx="20" cy="50" r="16"/><circle cx="80" cy="50" r="16"/><circle cx="29" cy="29" r="16"/><circle cx="71" cy="71" r="16"/><circle cx="71" cy="29" r="16"/><circle cx="29" cy="71" r="16"/></g><circle cx="50" cy="50" r="18" fill="#c8102e"/></svg>
+  <svg class="wedge" viewBox="0 0 64 64"><path d="M6 40 L44 20 L58 28 L20 48 Z" fill="#f29f05"/><path d="M6 40 L20 48 L20 56 L6 48 Z" fill="#1d1410"/><path d="M20 48 L58 28 L58 36 L20 56 Z" fill="#c8102e"/></svg>
+</div>
 
 <main>
-  <h1><img src="/favicon.svg" alt="">Cheese Platter</h1>
+  <header class="top">
+    <h1><img src="/favicon.svg" alt="">Cheese Platter</h1>
+    <div class="sound">
+      <button id="mute" type="button" aria-pressed="false" aria-label="Mute sound">🔊</button>
+      <input id="vol" type="range" min="0" max="1" step="0.05" value="0.7" aria-label="Volume">
+    </div>
+  </header>
 
   <section class="card splash" id="splash" aria-labelledby="welcome">
+    <p class="tag">Now showing</p>
     <h2 class="title" id="welcome">Welcome to the world of Cheese Platter ❤️</h2>
     <p class="lede">Bollywood pickup lines for your date, and when to use them.</p>
     <ol class="steps">
-      <li><span>Tap <strong>Find My Cheese</strong></span></li>
+      <li><span>Tap <b>Find My Cheese</b></span></li>
       <li>Read when to say it</li>
       <li>Use it on your date</li>
     </ol>
     <button id="start">Start</button>
   </section>
 
-  <div id="app" hidden style="width:100%;display:flex;flex-direction:column;align-items:center">
-
-  <div class="card">
-    <h2 class="title">Tu Cheez Badi Hai Mast Mast</h2>
+  <div id="app" hidden>
+  <div class="card" id="card">
+    <h2 class="tag">Tu Cheez Badi Hai Mast Mast</h2>
     <div class="result" id="result" aria-live="polite">
       <p class="line" id="line">Your cheese is waiting.</p>
-      <p class="movie" id="movie"></p>
-      <p class="when" id="when"></p>
+      <p class="credit" id="credit"></p>
+      <div class="note" id="note" hidden>
+        <b id="label">When to use it</b>
+        <p id="when"></p>
+        <div class="meter" id="meter"></div>
+      </div>
     </div>
     <button id="next">Find My Cheese</button>
   </div>
@@ -142,178 +184,178 @@
     <div id="platter">
       <h2>Iconic flirting lines</h2>
       <ul>
-        <li data-m="Dilwale Dulhania Le Jayenge" data-w="Vibe: Charming, playful, and unapologetically filmy.">“Bade bade deshon mein aisi chhoti chhoti baatein hoti rehti hain, Senorita.”</li>
-        <li data-m="Dilwale Dulhania Le Jayenge" data-w="Vibe: Flirty confidence. Best delivered with a cheeky grin.">“Agar woh mujhse pyaar karti hai, toh palat ke dekhegi… palat!”</li>
-        <li data-m="Kuch Kuch Hota Hai" data-w="Vibe: Sweet, subtle, and perfect when friendship starts feeling like something more.">“Pyaar dosti hai.”</li>
-        <li data-m="Hasee Toh Phasee" data-w="Vibe: Quirky, geeky, and for someone who appreciates a clever line.">“Socho main idea hoti aur tum technology… hamari patang kya mast udti na!”</li>
+        <li data-m="Dilwale Dulhania Le Jayenge" data-w="Vibe: Charming, playful, and unapologetically filmy.">Bade bade deshon mein aisi chhoti chhoti baatein hoti rehti hain, Senorita.</li>
+        <li data-m="Dilwale Dulhania Le Jayenge" data-w="Vibe: Flirty confidence. Best delivered with a cheeky grin.">Agar woh mujhse pyaar karti hai, toh palat ke dekhegi… palat!</li>
+        <li data-m="Kuch Kuch Hota Hai" data-w="Vibe: Sweet, subtle, and perfect when friendship starts feeling like something more.">Pyaar dosti hai.</li>
+        <li data-m="Hasee Toh Phasee" data-w="Vibe: Quirky, geeky, and for someone who appreciates a clever line.">Socho main idea hoti aur tum technology… hamari patang kya mast udti na!</li>
       </ul>
 
       <h2>SRK-level romantic lines</h2>
       <ul>
-        <li data-m="Kal Ho Naa Ho" data-w="Vibe: Intense, heartfelt, and slightly dangerous if you're trying to play it cool.">“Pyaar toh bahut log karte hain, lekin mere jaisa pyaar koi nahi kar sakta.”</li>
-        <li data-m="Mohabbatein" data-w="Vibe: Old-school romance, delivered with complete sincerity.">“Mohabbat mein shartein nahi hoti.”</li>
+        <li data-m="Kal Ho Naa Ho" data-w="Vibe: Intense, heartfelt, and slightly dangerous if you're trying to play it cool.">Pyaar toh bahut log karte hain, lekin mere jaisa pyaar koi nahi kar sakta.</li>
+        <li data-m="Mohabbatein" data-w="Vibe: Old-school romance, delivered with complete sincerity.">Mohabbat mein shartein nahi hoti.</li>
       </ul>
 
       <h2>Bold, cheeky &amp; slightly cheesy</h2>
       <ul>
-        <li data-m="2 States" data-w="Vibe: Personal, cheeky, and much better than a generic “you're beautiful.”">“Tumhare gaal ke til pe dil aa gaya hai mera.”</li>
-        <li data-m="Jab We Met" data-w="Vibe: Playful philosophy with a little romantic chaos.">“Jab koi pyaar mein hota hai, toh koi sahi galat nahi hota.”</li>
-        <li data-m="Yeh Jawaani Hai Deewani" data-w="Vibe: Flirtation with a confession hiding underneath.">“Tum samajhti kyun nahi? Agar main tumhare saath do minute aur raha, toh mujhe tumse pyaar ho jayega.”</li>
+        <li data-m="2 States" data-w="Vibe: Personal, cheeky, and much better than a generic you're beautiful.">Tumhare gaal ke til pe dil aa gaya hai mera.</li>
+        <li data-m="Jab We Met" data-w="Vibe: Playful philosophy with a little romantic chaos.">Jab koi pyaar mein hota hai, toh koi sahi galat nahi hota.</li>
+        <li data-m="Yeh Jawaani Hai Deewani" data-w="Vibe: Flirtation with a confession hiding underneath.">Tum samajhti kyun nahi? Agar main tumhare saath do minute aur raha, toh mujhe tumse pyaar ho jayega.</li>
       </ul>
 
       <h2>Bollywood lines you can actually text</h2>
       <ul>
-        <li data-m="Original, Bollywood-inspired" data-w="The SRK fan.">“Tum meri life mein aise aaye ho jaise interval ke baad movie interesting ho jaati hai.”</li>
-        <li data-m="Original, Bollywood-inspired" data-w="The playful flirt.">“Tum Simran ho ya nahi, par mera dil toh Raj banne ki acting kar raha hai.”</li>
-        <li data-m="Original, Bollywood-inspired" data-w="The cheesy one.">“Tumse baat karna meri favourite film hai. Bas problem yeh hai ki iska next episode kab aayega, pata nahi.”</li>
-        <li data-m="Original, Bollywood-inspired" data-w="The modern romantic.">“Mujhe tumhara number nahi, tumhari life mein recurring role chahiye.”</li>
-        <li data-m="Original, Bollywood-inspired" data-w="The confident one.">“Tumhari smile ka trailer dekh liya. Ab full movie dekhne ka mann hai.”</li>
-        <li data-m="Original, Bollywood-inspired" data-w="The WhatsApp flirt.">“Tum online aate ho toh mera dil background mein romantic music bajane lagta hai.”</li>
+        <li data-m="Original, Bollywood-inspired" data-w="The SRK fan.">Tum meri life mein aise aaye ho jaise interval ke baad movie interesting ho jaati hai.</li>
+        <li data-m="Original, Bollywood-inspired" data-w="The playful flirt.">Tum Simran ho ya nahi, par mera dil toh Raj banne ki acting kar raha hai.</li>
+        <li data-m="Original, Bollywood-inspired" data-w="The cheesy one.">Tumse baat karna meri favourite film hai. Bas problem yeh hai ki iska next episode kab aayega, pata nahi.</li>
+        <li data-m="Original, Bollywood-inspired" data-w="The modern romantic.">Mujhe tumhara number nahi, tumhari life mein recurring role chahiye.</li>
+        <li data-m="Original, Bollywood-inspired" data-w="The confident one.">Tumhari smile ka trailer dekh liya. Ab full movie dekhne ka mann hai.</li>
+        <li data-m="Original, Bollywood-inspired" data-w="The WhatsApp flirt.">Tum online aate ho toh mera dil background mein romantic music bajane lagta hai.</li>
       </ul>
 
       <h2>The over-the-top classics (pure cheese)</h2>
       <ul>
-        <li data-m="Pakeezah" data-w="Deliver this deadpan when they complain about their feet hurting.">“Aapke paon dekhe, bahut haseen hain. Inhe zameen par mat utariyega, maile ho jayenge.”</li>
-        <li data-m="Hum Dil De Chuke Sanam" data-w="The absolute classic for maintaining intense eye contact.">“Agar tum mujhe aise hi dekhte rahe, toh mujhe tumse pyaar ho jayega.”</li>
+        <li data-m="Pakeezah" data-w="Deliver this deadpan when they complain about their feet hurting.">Aapke paon dekhe, bahut haseen hain. Inhe zameen par mat utariyega, maile ho jayenge.</li>
+        <li data-m="Hum Dil De Chuke Sanam" data-w="The absolute classic for maintaining intense eye contact.">Agar tum mujhe aise hi dekhte rahe, toh mujhe tumse pyaar ho jayega.</li>
       </ul>
 
-      <h2>The Bollywood “tashan” (full attitude)</h2>
+      <h2>The Bollywood tashan (full attitude)</h2>
       <ul>
-        <li data-m="Dhadkan" data-w="Say this with completely exaggerated, melodramatic intensity right before leaving.">“Tum mujhe bhool jao yeh haq main tumhe nahi doongi.”</li>
-        <li data-m="Anand" data-w="A dramatic way to suggest extending the date.">“Babu moshai, zindagi badi honi chahiye, lambi nahi… aur aaj ki raat toh bilkul choti nahi honi chahiye.”</li>
+        <li data-m="Dhadkan" data-w="Say this with completely exaggerated, melodramatic intensity right before leaving.">Tum mujhe bhool jao yeh haq main tumhe nahi doongi.</li>
+        <li data-m="Anand" data-w="A dramatic way to suggest extending the date.">Babu moshai, zindagi badi honi chahiye, lambi nahi… aur aaj ki raat toh bilkul choti nahi honi chahiye.</li>
       </ul>
 
       <h2>Short, sweet &amp; highly filmy</h2>
       <ul>
-        <li data-m="Ghulam" data-w="The ultimate retro 90s invitation to go anywhere.">“Aati kya Khandala?”</li>
-        <li data-m="Dil To Pagal Hai" data-w="Use this completely unironically, even if — and especially if — that is not your name.">“Rahul, naam toh suna hoga?”</li>
+        <li data-m="Ghulam" data-w="The ultimate retro 90s invitation to go anywhere.">Aati kya Khandala?</li>
+        <li data-m="Dil To Pagal Hai" data-w="Use this completely unironically, even if — and especially if — that is not your name.">Rahul, naam toh suna hoga?</li>
       </ul>
 
       <h2>Meta-Bollywood (breaking the 4th wall)</h2>
       <ul>
-        <li data-m="Meta-Bollywood" data-w="Breaking the 4th wall.">“Agar hum kisi Karan Johar ki film mein hote, toh abhi background mein violin baj raha hota aur hawa chal rahi hoti.”</li>
-        <li data-m="Meta-Bollywood" data-w="Breaking the 4th wall.">“Let's skip the boring stuff and fast-forward to our choreographed dance sequence.”</li>
-        <li data-m="Meta-Bollywood" data-w="Breaking the 4th wall.">“Kya tum Yash Raj ki script ho? Kyunki tumhara budget aur looks dono high lag rahe hain.”</li>
+        <li data-m="Meta-Bollywood" data-w="Breaking the 4th wall.">Agar hum kisi Karan Johar ki film mein hote, toh abhi background mein violin baj raha hota aur hawa chal rahi hoti.</li>
+        <li data-m="Meta-Bollywood" data-w="Breaking the 4th wall.">Let's skip the boring stuff and fast-forward to our choreographed dance sequence.</li>
+        <li data-m="Meta-Bollywood" data-w="Breaking the 4th wall.">Kya tum Yash Raj ki script ho? Kyunki tumhara budget aur looks dono high lag rahe hain.</li>
       </ul>
 
       <h2>The confident &amp; cheeky openers</h2>
       <ul>
-        <li data-m="Jab We Met" data-w="Scenario: When you first sit down, lock eyes, and catch him smiling at you.">“Aap convince ho gaye, ya main thoda aur try karun?”</li>
-        <li data-m="2 States" data-w="Scenario: Drop this completely deadpan the second he does something highly attractive, like ordering your exact favorite drink or pulling out your chair.">“Tumse shaadi karne ke liye mujhe kya karna padega?”</li>
-        <li data-m="Dil To Pagal Hai" data-w="Scenario: When he walks into the cafe looking exceptionally sharp and you greet him.">“Kya tum vahi ho jiske baare mein main hamesha sochti hoon?”</li>
-        <li data-m="Jab We Met (Tweaked)" data-w="Scenario: When he gives you a compliment on your outfit or your vibe.">“Main apni favorite hoon… aur ab lagta hai tumhari bhi banne wali hoon.”</li>
-        <li data-m="Khoobsurat (Tweaked)" data-w="Scenario: A smooth, flattering greeting as soon as he sits at the table.">“Tum hamesha aise hi handsome the, ya aaj kuch khaas try kiya hai?”</li>
-        <li data-m="Dil To Pagal Hai" data-w="Scenario: Say this with exaggerated melodrama when he agrees to share his fries with you.">“Mujhe yakeen hai ki main sirf isliye janmi hoon ki tumse pyaar kar sakun.”</li>
-        <li data-m="Kabhi Khushi Kabhie Gham (Tweaked)" data-w="Scenario: When he takes his jacket off or smiles warmly at you.">“Tumhe koi haq nahi banta ki tum itne handsome lago. Not fair.”</li>
-        <li data-m="Kabhi Khushi Kabhie Gham" data-w="Scenario: If he gets momentarily distracted by the waiter and looks away from you.">“Kaun hai yeh jisne mud ke mujhe nahi dekha?”</li>
-        <li data-m="Hasee Toh Phasee" data-w="Scenario: When you both instantly agree on a very niche topic or a controversial opinion.">“Tum oxygen aur main double hydrogen… hamari chemistry ekdum pani ki tarah hai.”</li>
-        <li data-m="Chennai Express (Tweaked)" data-w="Scenario: Playfully explaining why you ended up matching with him on a dating app.">“Main yahan pe aayi nahi hoon, mujhe laya gaya hai… by destiny.”</li>
+        <li data-m="Jab We Met" data-w="Scenario: When you first sit down, lock eyes, and catch him smiling at you.">Aap convince ho gaye, ya main thoda aur try karun?</li>
+        <li data-m="2 States" data-w="Scenario: Drop this completely deadpan the second he does something highly attractive, like ordering your exact favorite drink or pulling out your chair.">Tumse shaadi karne ke liye mujhe kya karna padega?</li>
+        <li data-m="Dil To Pagal Hai" data-w="Scenario: When he walks into the cafe looking exceptionally sharp and you greet him.">Kya tum vahi ho jiske baare mein main hamesha sochti hoon?</li>
+        <li data-m="Jab We Met (Tweaked)" data-w="Scenario: When he gives you a compliment on your outfit or your vibe.">Main apni favorite hoon… aur ab lagta hai tumhari bhi banne wali hoon.</li>
+        <li data-m="Khoobsurat (Tweaked)" data-w="Scenario: A smooth, flattering greeting as soon as he sits at the table.">Tum hamesha aise hi handsome the, ya aaj kuch khaas try kiya hai?</li>
+        <li data-m="Dil To Pagal Hai" data-w="Scenario: Say this with exaggerated melodrama when he agrees to share his fries with you.">Mujhe yakeen hai ki main sirf isliye janmi hoon ki tumse pyaar kar sakun.</li>
+        <li data-m="Kabhi Khushi Kabhie Gham (Tweaked)" data-w="Scenario: When he takes his jacket off or smiles warmly at you.">Tumhe koi haq nahi banta ki tum itne handsome lago. Not fair.</li>
+        <li data-m="Kabhi Khushi Kabhie Gham" data-w="Scenario: If he gets momentarily distracted by the waiter and looks away from you.">Kaun hai yeh jisne mud ke mujhe nahi dekha?</li>
+        <li data-m="Hasee Toh Phasee" data-w="Scenario: When you both instantly agree on a very niche topic or a controversial opinion.">Tum oxygen aur main double hydrogen… hamari chemistry ekdum pani ki tarah hai.</li>
+        <li data-m="Chennai Express (Tweaked)" data-w="Scenario: Playfully explaining why you ended up matching with him on a dating app.">Main yahan pe aayi nahi hoon, mujhe laya gaya hai… by destiny.</li>
       </ul>
 
       <h2>The sassy, playful banter</h2>
       <ul>
-        <li data-m="Dil To Pagal Hai (Tweaked)" data-w="Scenario: If he formally introduces himself, use this regardless of his actual name.">“Rahul, naam toh suna hoga? Or should I just call you mine?”</li>
-        <li data-m="Maine Pyar Kiya" data-w="Scenario: When he apologizes for being two minutes late or thanks you for a compliment.">“Dosti ka ek usool hai, no sorry, no thank you.”</li>
-        <li data-m="Deewaar (Tweaked)" data-w="Scenario: When bantering about who is going to pay the bill.">“Main aaj bhi phenke hue paise nahi uthati… unless you're buying the next round.”</li>
-        <li data-m="Heropanti" data-w="Scenario: If he complains about the spice level of the food or the distance to the next bar.">“Chhoti bacchi ho kya?”</li>
-        <li data-m="Damini (Tweaked)" data-w="Scenario: If you guys talked online for weeks before he finally planned the date.">“Tareekh pe tareekh, tareekh pe tareekh… finally you asked me out.”</li>
-        <li data-m="Shahenshah (Tweaked)" data-w="Scenario: Establishing playful dominance when picking where to go for dessert.">“Rishte mein toh hum tumhare baap lagte hain… par I'll let you lead this date.”</li>
-        <li data-m="Sholay" data-w="Scenario: If he admits he has never seen your favorite movie or eaten your favorite food.">“Isse bada crime toh humne dekha hi nahi.”</li>
-        <li data-m="Don (Tweaked)" data-w="Scenario: When he asks if he's successfully winning you over.">“Don ko pakadna mushkil hi nahi, namumkin hai… but you're doing a good job.”</li>
+        <li data-m="Dil To Pagal Hai (Tweaked)" data-w="Scenario: If he formally introduces himself, use this regardless of his actual name.">Rahul, naam toh suna hoga? Or should I just call you mine?</li>
+        <li data-m="Maine Pyar Kiya" data-w="Scenario: When he apologizes for being two minutes late or thanks you for a compliment.">Dosti ka ek usool hai, no sorry, no thank you.</li>
+        <li data-m="Deewaar (Tweaked)" data-w="Scenario: When bantering about who is going to pay the bill.">Main aaj bhi phenke hue paise nahi uthati… unless you're buying the next round.</li>
+        <li data-m="Heropanti" data-w="Scenario: If he complains about the spice level of the food or the distance to the next bar.">Chhoti bacchi ho kya?</li>
+        <li data-m="Damini (Tweaked)" data-w="Scenario: If you guys talked online for weeks before he finally planned the date.">Tareekh pe tareekh, tareekh pe tareekh… finally you asked me out.</li>
+        <li data-m="Shahenshah (Tweaked)" data-w="Scenario: Establishing playful dominance when picking where to go for dessert.">Rishte mein toh hum tumhare baap lagte hain… par I'll let you lead this date.</li>
+        <li data-m="Sholay" data-w="Scenario: If he admits he has never seen your favorite movie or eaten your favorite food.">Isse bada crime toh humne dekha hi nahi.</li>
+        <li data-m="Don (Tweaked)" data-w="Scenario: When he asks if he's successfully winning you over.">Don ko pakadna mushkil hi nahi, namumkin hai… but you're doing a good job.</li>
       </ul>
 
       <h2>Navigating food, drinks &amp; the bill</h2>
       <ul>
-        <li data-m="Mr. &amp; Mrs. Khiladi (Tweaked)" data-w="Scenario: When the appetizers arrive and you want to keep the flirting light.">“Jab tak samose mein aaloo rahega, mera interest tumme rahega.”</li>
-        <li data-m="Devdas (Tweaked)" data-w="Scenario: When clinking glasses for the first toast of the evening.">“Kaun kambakht bardaasht karne ko peeta hai? Main toh tumhe aur enjoy karne ke liye peeti hoon.”</li>
-        <li data-m="Singham" data-w="Scenario: Give a mock-serious glare if he tries to steal a bite of your dessert without asking.">“Aata majhi satakli.”</li>
-        <li data-m="Damini (Tweaked)" data-w="Scenario: Reaching your hand across the table playfully.">“Ye dhai kilo ka haath nahi, mera chota sa haath hai… hold it?”</li>
-        <li data-m="Karan Arjun (Tweaked)" data-w="Scenario: Staring longingly at the kitchen when you're both starving.">“Mere Karan Arjun aayenge… aur mera pasta bhi.”</li>
-        <li data-m="Bajirao Mastani (Tweaked)" data-w="Scenario: Fiercely and dramatically defending your main course.">“Aap humse humari zindagi maang lete hum aapko khushi khushi de dete… par mera pizza nahi.”</li>
-        <li data-m="Hera Pheri" data-w="Scenario: Whispering this jokingly with a straight face when the check arrives.">“Paisa laya?”</li>
-        <li data-m="Singham" data-w="Scenario: Sliding the cocktail menu over to him to pick the second round.">“Aali re aali, aata tujhi baari aali.”</li>
-        <li data-m="Ram-Leela" data-w="Scenario: When deciding if you both should split a really decadent dessert.">“Dono taraf se aag barabar lagi honi chahiye.”</li>
-        <li data-m="Kuch Kuch Hota Hai (Tweaked)" data-w="Scenario: Convincing him to break his diet for the night.">“Hum ek baar jeete hain, ek baar marte hain… so let's order the chocolate cake.”</li>
-        <li data-m="Mr. India" data-w="Scenario: A satisfied sign-off when he pays the bill or opens the door for you.">“Mogambo khush hua.”</li>
+        <li data-m="Mr. &amp; Mrs. Khiladi (Tweaked)" data-w="Scenario: When the appetizers arrive and you want to keep the flirting light.">Jab tak samose mein aaloo rahega, mera interest tumme rahega.</li>
+        <li data-m="Devdas (Tweaked)" data-w="Scenario: When clinking glasses for the first toast of the evening.">Kaun kambakht bardaasht karne ko peeta hai? Main toh tumhe aur enjoy karne ke liye peeti hoon.</li>
+        <li data-m="Singham" data-w="Scenario: Give a mock-serious glare if he tries to steal a bite of your dessert without asking.">Aata majhi satakli.</li>
+        <li data-m="Damini (Tweaked)" data-w="Scenario: Reaching your hand across the table playfully.">Ye dhai kilo ka haath nahi, mera chota sa haath hai… hold it?</li>
+        <li data-m="Karan Arjun (Tweaked)" data-w="Scenario: Staring longingly at the kitchen when you're both starving.">Mere Karan Arjun aayenge… aur mera pasta bhi.</li>
+        <li data-m="Bajirao Mastani (Tweaked)" data-w="Scenario: Fiercely and dramatically defending your main course.">Aap humse humari zindagi maang lete hum aapko khushi khushi de dete… par mera pizza nahi.</li>
+        <li data-m="Hera Pheri" data-w="Scenario: Whispering this jokingly with a straight face when the check arrives.">Paisa laya?</li>
+        <li data-m="Singham" data-w="Scenario: Sliding the cocktail menu over to him to pick the second round.">Aali re aali, aata tujhi baari aali.</li>
+        <li data-m="Ram-Leela" data-w="Scenario: When deciding if you both should split a really decadent dessert.">Dono taraf se aag barabar lagi honi chahiye.</li>
+        <li data-m="Kuch Kuch Hota Hai (Tweaked)" data-w="Scenario: Convincing him to break his diet for the night.">Hum ek baar jeete hain, ek baar marte hain… so let's order the chocolate cake.</li>
+        <li data-m="Mr. India" data-w="Scenario: A satisfied sign-off when he pays the bill or opens the door for you.">Mogambo khush hua.</li>
       </ul>
 
       <h2>Sweeping him off his feet</h2>
       <ul>
-        <li data-m="Yeh Jawaani Hai Deewani" data-w="Scenario: Lock eyes, say this casually, and immediately take a sip of your drink.">“Tumhari smile kitni dangerous hai pata hai? Mere paas dil hota na, teri smile pe pakka aa jaata.”</li>
-        <li data-m="Yeh Jawaani Hai Deewani (Tweaked)" data-w="Scenario: A great compliment to drop mid-conversation when he is talking passionately about something.">“Tum pehle bhi itne hi handsome the ya waqt ne kiya koi haseen sitam?”</li>
-        <li data-m="Om Shanti Om" data-w="Scenario: A cheeky way to admit you were the one who liked his profile first or double-texted.">“Itni shiddat se maine tumhe paane ki koshish ki hai, ki har zarre ne mujhe tumse milane ki saazish ki hai.”</li>
-        <li data-m="Aashiqui 2" data-w="Scenario: Use this highly dramatically when he fixes a minor problem, like getting the waiter's attention.">“Tumhare ishq se bani hoon main… pehle zinda thi, ab jee rahi hoon main.”</li>
-        <li data-m="Gully Boy" data-w="Scenario: Spoken softly and genuinely on a late-night drive or while holding coffee cups.">“Tere bina kisi cheez mein mauj nahi… na chai mein, na life mein.”</li>
-        <li data-m="Dil Chahta Hai" data-w="Scenario: When he reveals a slightly nerdy, quirky hobby or a guilty pleasure he was shy about.">“Koi pyaar kare toh tumse kare, tum jaise ho waise kare.”</li>
-        <li data-m="Bajirao Mastani (Tweaked)" data-w="Scenario: When he promises he knows a great hidden spot for post-dinner drinks.">“Cheete ki chaal, baaz ki nazar, aur tumhari choice par sandeh nahi karte.”</li>
-        <li data-m="Pakeezah (Tweaked)" data-w="Scenario: When he suggests walking a long distance in the heat or cold to the next location.">“Aapke paon dekhe, bahut haseen hain. Inhe zameen par mat utariyega, let's take a cab.”</li>
-        <li data-m="Kuch Kuch Hota Hai" data-w="Scenario: When he does something small but chivalrous, like pulling out your chair or shielding you from traffic.">“Kuch kuch hota hai… tum nahi samjhoge.”</li>
-        <li data-m="Kick (Tweaked)" data-w="Scenario: When he asks a deep, probing question about your personality.">“Hum dosti mein aate hain, samajh mein nahi.”</li>
-        <li data-m="Baazigar" data-w="Scenario: When you deliberately let him win a playful, meaningless argument.">“Kabhi kabhi jeetne ke liye kuch haarna bhi padta hai, aur haar kar jeetne wale ko baazigar kehte hain.”</li>
-        <li data-m="Dilwale Dulhania Le Jayenge (Tweaked)" data-w="Scenario: When convincing him to be spontaneous and go to a random spot after dinner.">“Jaa Simran jaa, jee le apni zindagi… mere saath.”</li>
+        <li data-m="Yeh Jawaani Hai Deewani" data-w="Scenario: Lock eyes, say this casually, and immediately take a sip of your drink.">Tumhari smile kitni dangerous hai pata hai? Mere paas dil hota na, teri smile pe pakka aa jaata.</li>
+        <li data-m="Yeh Jawaani Hai Deewani (Tweaked)" data-w="Scenario: A great compliment to drop mid-conversation when he is talking passionately about something.">Tum pehle bhi itne hi handsome the ya waqt ne kiya koi haseen sitam?</li>
+        <li data-m="Om Shanti Om" data-w="Scenario: A cheeky way to admit you were the one who liked his profile first or double-texted.">Itni shiddat se maine tumhe paane ki koshish ki hai, ki har zarre ne mujhe tumse milane ki saazish ki hai.</li>
+        <li data-m="Aashiqui 2" data-w="Scenario: Use this highly dramatically when he fixes a minor problem, like getting the waiter's attention.">Tumhare ishq se bani hoon main… pehle zinda thi, ab jee rahi hoon main.</li>
+        <li data-m="Gully Boy" data-w="Scenario: Spoken softly and genuinely on a late-night drive or while holding coffee cups.">Tere bina kisi cheez mein mauj nahi… na chai mein, na life mein.</li>
+        <li data-m="Dil Chahta Hai" data-w="Scenario: When he reveals a slightly nerdy, quirky hobby or a guilty pleasure he was shy about.">Koi pyaar kare toh tumse kare, tum jaise ho waise kare.</li>
+        <li data-m="Bajirao Mastani (Tweaked)" data-w="Scenario: When he promises he knows a great hidden spot for post-dinner drinks.">Cheete ki chaal, baaz ki nazar, aur tumhari choice par sandeh nahi karte.</li>
+        <li data-m="Pakeezah (Tweaked)" data-w="Scenario: When he suggests walking a long distance in the heat or cold to the next location.">Aapke paon dekhe, bahut haseen hain. Inhe zameen par mat utariyega, let's take a cab.</li>
+        <li data-m="Kuch Kuch Hota Hai" data-w="Scenario: When he does something small but chivalrous, like pulling out your chair or shielding you from traffic.">Kuch kuch hota hai… tum nahi samjhoge.</li>
+        <li data-m="Kick (Tweaked)" data-w="Scenario: When he asks a deep, probing question about your personality.">Hum dosti mein aate hain, samajh mein nahi.</li>
+        <li data-m="Baazigar" data-w="Scenario: When you deliberately let him win a playful, meaningless argument.">Kabhi kabhi jeetne ke liye kuch haarna bhi padta hai, aur haar kar jeetne wale ko baazigar kehte hain.</li>
+        <li data-m="Dilwale Dulhania Le Jayenge (Tweaked)" data-w="Scenario: When convincing him to be spontaneous and go to a random spot after dinner.">Jaa Simran jaa, jee le apni zindagi… mere saath.</li>
       </ul>
 
       <h2>Leaving a mark (the end of the night)</h2>
       <ul>
-        <li data-m="Anand (Tweaked)" data-w="Scenario: Smoothly suggesting you extend the night instead of going home.">“Babu moshai, zindagi badi honi chahiye, lambi nahi… aur yeh date bhi.”</li>
-        <li data-m="Dhadkan" data-w="Scenario: Whisper this intensely right before you hug him goodbye.">“Main tumhe bhool jaon yeh ho nahi sakta, aur tum mujhe bhool jao yeh main hone nahi doongi.”</li>
-        <li data-m="Om Shanti Om" data-w="Scenario: When he asks if you want to call it a night, but you want to grab ice cream.">“Picture abhi baaki hai mere dost.”</li>
-        <li data-m="Dilwale Dulhania Le Jayenge" data-w="Scenario: Say this audibly to yourself as he walks you to your cab and turns back around to look at you.">“Palat… Palat… Palat.”</li>
-        <li data-m="Deewaar" data-w="Scenario: When you finally tell him that you had a great time and would love to see him again.">“Aaj khush toh bahut hoge tum.”</li>
-        <li data-m="Jazbaa" data-w="Scenario: A dramatic, funny text to send him exactly 10 minutes after the date ends.">“Mohabbat hai is liye jaane diya, zidd hoti toh baahon mein hoti.”</li>
-        <li data-m="Karan Arjun (Tweaked)" data-w="Scenario: Looking back over your shoulder with a smirk as you walk away.">“Main wapas aaoongi.”</li>
-        <li data-m="Kaalia (Tweaked)" data-w="Scenario: When deciding exactly where to part ways on the street.">“Hum jahan khade hote hain, date wahi pe khatam hoti hai.”</li>
-        <li data-m="Maine Pyar Kiya (Tweaked)" data-w="Scenario: A sweet, slightly bossy way to ensure he messages you to say he got home safe.">“Dosti ki hai, nibhani toh padegi… text me when you reach.”</li>
-        <li data-m="Amar Prem (Tweaked)" data-w="Scenario: A sarcastic, confident closer right before you get into your Uber.">“Pushpa, I hate tears… so don't cry because the date is over.”</li>
-        <li data-m="Kalicharan (Tweaked)" data-w="Scenario: When he asks for your number or socials at the end of the night.">“Sara shehar mujhe [Your Name] ke naam se jaanta hai.”</li>
+        <li data-m="Anand (Tweaked)" data-w="Scenario: Smoothly suggesting you extend the night instead of going home.">Babu moshai, zindagi badi honi chahiye, lambi nahi… aur yeh date bhi.</li>
+        <li data-m="Dhadkan" data-w="Scenario: Whisper this intensely right before you hug him goodbye.">Main tumhe bhool jaon yeh ho nahi sakta, aur tum mujhe bhool jao yeh main hone nahi doongi.</li>
+        <li data-m="Om Shanti Om" data-w="Scenario: When he asks if you want to call it a night, but you want to grab ice cream.">Picture abhi baaki hai mere dost.</li>
+        <li data-m="Dilwale Dulhania Le Jayenge" data-w="Scenario: Say this audibly to yourself as he walks you to your cab and turns back around to look at you.">Palat… Palat… Palat.</li>
+        <li data-m="Deewaar" data-w="Scenario: When you finally tell him that you had a great time and would love to see him again.">Aaj khush toh bahut hoge tum.</li>
+        <li data-m="Jazbaa" data-w="Scenario: A dramatic, funny text to send him exactly 10 minutes after the date ends.">Mohabbat hai is liye jaane diya, zidd hoti toh baahon mein hoti.</li>
+        <li data-m="Karan Arjun (Tweaked)" data-w="Scenario: Looking back over your shoulder with a smirk as you walk away.">Main wapas aaoongi.</li>
+        <li data-m="Kaalia (Tweaked)" data-w="Scenario: When deciding exactly where to part ways on the street.">Hum jahan khade hote hain, date wahi pe khatam hoti hai.</li>
+        <li data-m="Maine Pyar Kiya (Tweaked)" data-w="Scenario: A sweet, slightly bossy way to ensure he messages you to say he got home safe.">Dosti ki hai, nibhani toh padegi… text me when you reach.</li>
+        <li data-m="Amar Prem (Tweaked)" data-w="Scenario: A sarcastic, confident closer right before you get into your Uber.">Pushpa, I hate tears… so don't cry because the date is over.</li>
+        <li data-m="Kalicharan (Tweaked)" data-w="Scenario: When he asks for your number or socials at the end of the night.">Sara shehar mujhe [Your Name] ke naam se jaanta hai.</li>
       </ul>
 
       <h2>Witty comebacks &amp; playful banter</h2>
       <ul>
-        <li data-m="Andaz Apna Apna" data-w="When to use it: Deliver this with extreme sarcasm when he does the absolute bare minimum, like successfully pouring water without spilling it.">“Aap purush hi nahi, mahapurush hain!”</li>
-        <li data-m="Phir Hera Pheri" data-w="When to use it: When he sends a highly dramatic text complaining about how tired he is or exaggerates a minor inconvenience.">“50 rupya kaat overacting ka.”</li>
-        <li data-m="Welcome" data-w="When to use it: Whisper this audibly to yourself when you are trying not to laugh at a terrible joke he just made, or when you are trying to hide your excitement.">“Control Uday, control.”</li>
-        <li data-m="Phir Hera Pheri" data-w="When to use it: When he accidentally reveals an inside joke in front of other people, or speaks too loudly about a surprise.">“Zor zor se bolke logon ko schemein bata de.”</li>
-        <li data-m="Gangs of Wasseypur" data-w="When to use it: Playful, deadpan teasing when he struggles with a simple task, like opening a jar, fixing a typo, or losing a casual bet to you.">“Tumse na ho payega.”</li>
-        <li data-m="Hera Pheri" data-w="When to use it: Utter this in mock despair when you are third-wheeling with him and a friend, or when he says something exceptionally cheesy.">“Utha le re baba, utha le… mere ko nahi, in dono ko utha le.”</li>
-        <li data-m="3 Idiots" data-w="When to use it: When he actually manages to solve a problem for you, like fixing a glitch on your phone or finding the perfect place for dinner.">“Jahanpanah! Tussi great ho, tohfa qubool karo!”</li>
-        <li data-m="Jab We Met" data-w="When to use it: Drop this completely out of nowhere if he does something highly domestic, like cooking a great meal or folding a blanket perfectly.">“Bachpan se hi na, mujhe shaadi karne ka bada craze hai, by God.”</li>
-        <li data-m="Hera Pheri" data-w="When to use it: When you do something incredibly clumsy (like tripping over your own feet) and want to play it off as an intentional power move.">“Yeh Baburao ka style hai.”</li>
-        <li data-m="Munna Bhai M.B.B.S." data-w="When to use it: If you walk into a ridiculously tiny cafe or bar on a date, or if he shows you a cramped apartment.">“Bhai, ye room toh shuru hote hi khatam ho gaya.”</li>
-        <li data-m="Andaz Apna Apna" data-w="When to use it: When you are trying to playfully intimidate him into giving you the last slice of pizza.">“Crime Master Gogo naam hai mera, aankhein nikal ke gotiyan khelta hoon.”</li>
-        <li data-m="Munna Bhai M.B.B.S." data-w="When to use it: When he is mildly stressing out about work or a minor deadline, and you want to offer terrible but supportive advice.">“Tension lene ka nahi, sirf dene ka.”</li>
-        <li data-m="Andaz Apna Apna" data-w="When to use it: When you unapologetically steal a sip of his drink or a bite of his food because you didn't want to order your own.">“Do dost ek pyale mein chai piyenge, isse dosti badhti hai.”</li>
-        <li data-m="3 Idiots" data-w="When to use it: When looking at the ridiculously overpriced menu at a fancy restaurant he brought you to.">“Paneer toh beta, kuch dino mein sonaar ki dukaan mein bikega.”</li>
-        <li data-m="Andaz Apna Apna" data-w="When to use it: When you are playfully arguing over who is right about a random fact and you want to drop a chaotic mic-drop.">“Teja main hoon, mark idhar hai!”</li>
+        <li data-m="Andaz Apna Apna" data-w="When to use it: Deliver this with extreme sarcasm when he does the absolute bare minimum, like successfully pouring water without spilling it.">Aap purush hi nahi, mahapurush hain!</li>
+        <li data-m="Phir Hera Pheri" data-w="When to use it: When he sends a highly dramatic text complaining about how tired he is or exaggerates a minor inconvenience.">50 rupya kaat overacting ka.</li>
+        <li data-m="Welcome" data-w="When to use it: Whisper this audibly to yourself when you are trying not to laugh at a terrible joke he just made, or when you are trying to hide your excitement.">Control Uday, control.</li>
+        <li data-m="Phir Hera Pheri" data-w="When to use it: When he accidentally reveals an inside joke in front of other people, or speaks too loudly about a surprise.">Zor zor se bolke logon ko schemein bata de.</li>
+        <li data-m="Gangs of Wasseypur" data-w="When to use it: Playful, deadpan teasing when he struggles with a simple task, like opening a jar, fixing a typo, or losing a casual bet to you.">Tumse na ho payega.</li>
+        <li data-m="Hera Pheri" data-w="When to use it: Utter this in mock despair when you are third-wheeling with him and a friend, or when he says something exceptionally cheesy.">Utha le re baba, utha le… mere ko nahi, in dono ko utha le.</li>
+        <li data-m="3 Idiots" data-w="When to use it: When he actually manages to solve a problem for you, like fixing a glitch on your phone or finding the perfect place for dinner.">Jahanpanah! Tussi great ho, tohfa qubool karo!</li>
+        <li data-m="Jab We Met" data-w="When to use it: Drop this completely out of nowhere if he does something highly domestic, like cooking a great meal or folding a blanket perfectly.">Bachpan se hi na, mujhe shaadi karne ka bada craze hai, by God.</li>
+        <li data-m="Hera Pheri" data-w="When to use it: When you do something incredibly clumsy (like tripping over your own feet) and want to play it off as an intentional power move.">Yeh Baburao ka style hai.</li>
+        <li data-m="Munna Bhai M.B.B.S." data-w="When to use it: If you walk into a ridiculously tiny cafe or bar on a date, or if he shows you a cramped apartment.">Bhai, ye room toh shuru hote hi khatam ho gaya.</li>
+        <li data-m="Andaz Apna Apna" data-w="When to use it: When you are trying to playfully intimidate him into giving you the last slice of pizza.">Crime Master Gogo naam hai mera, aankhein nikal ke gotiyan khelta hoon.</li>
+        <li data-m="Munna Bhai M.B.B.S." data-w="When to use it: When he is mildly stressing out about work or a minor deadline, and you want to offer terrible but supportive advice.">Tension lene ka nahi, sirf dene ka.</li>
+        <li data-m="Andaz Apna Apna" data-w="When to use it: When you unapologetically steal a sip of his drink or a bite of his food because you didn't want to order your own.">Do dost ek pyale mein chai piyenge, isse dosti badhti hai.</li>
+        <li data-m="3 Idiots" data-w="When to use it: When looking at the ridiculously overpriced menu at a fancy restaurant he brought you to.">Paneer toh beta, kuch dino mein sonaar ki dukaan mein bikega.</li>
+        <li data-m="Andaz Apna Apna" data-w="When to use it: When you are playfully arguing over who is right about a random fact and you want to drop a chaotic mic-drop.">Teja main hoon, mark idhar hai!</li>
       </ul>
 
       <h2>More comedy gold</h2>
       <ul>
-        <li data-m="Phir Hera Pheri" data-w="When to use it: When that 1:30 AM Swiggy order finally arrives and you are both absolutely starving.">“Abhi maza aayega na bhidu.”</li>
-        <li data-m="Hera Pheri" data-w="When to use it: When he playfully complains about you overthinking an AI prompt, tweaking an app design for the hundredth time, or being overly meticulous about something small.">“Main kya karu phir? Job chhod du?”</li>
-        <li data-m="Phir Hera Pheri" data-w="When to use it: When he tries to act tough or protective but immediately gets startled by a bug or a loud noise.">“Kya gunda banega re tu.”</li>
-        <li data-m="Phir Hera Pheri" data-w="When to use it: If he gets distracted looking at you and accidentally bumps into a table or fumbles his words.">“Aurat ka chakkar babu bhaiya, aurat ka chakkar.”</li>
-        <li data-m="Munna Bhai M.B.B.S." data-w="When to use it: When you decisively pick the restaurant or the movie for the night and refuse to take no for an answer.">“Bhai ne bola karne ka, to karne ka.”</li>
-        <li data-m="Vivah" data-w="When to use it: When he's been talking non-stop trying to impress you, and you smoothly slide a glass of water across the table to him.">“Jal lijiye… thak gaye honge.”</li>
-        <li data-m="Race 3" data-w="When to use it: When a waiter interrupts a deep conversation, or if he asks a cheeky, overly intrusive question and you want to dodge it hilariously.">“Our business is our business, none of your business.”</li>
-        <li data-m="PK" data-w="When to use it: When he keeps changing the dinner plans or the meeting time at the very last minute.">“Hum koi mandir ka ghanta hai ki koi bhi aake baja jata hai?”</li>
-        <li data-m="Kabhi Khushi Kabhie Gham" data-w="When to use it: When a sarcastic comment lands a bit too hard and you need to backtrack with maximum Poo energy.">“It's a joke, it's a joke!”</li>
-        <li data-m="Nagina (and general pop culture)" data-w="When to use it: A spooky, deadpan, and hilarious way to invite him over to your place for the next date.">“Aao kabhi haveli pe.”</li>
-        <li data-m="Phir Hera Pheri" data-w="When to use it: When he suggests watching a horror movie, or when he tries a really bold, direct pickup line on you.">“Mereko to aisa dhak dhak horela hai.”</li>
-        <li data-m="Welcome" data-w="When to use it: When he asks if you need anything else from the menu or if you are comfortable.">“Bhagwan ka diya sab kuch hai, daulat hai, shauhrat hai, izzat hai…”</li>
-        <li data-m="Masaan" data-w="When to use it: When the waiter returns to the table to inform you that your favorite dessert is out of stock.">“Saala ye dukh kaahe khatam nahi hota be.”</li>
-        <li data-m="Andaz Apna Apna" data-w="When to use it: When he asks a painfully obvious question and you reply with complete, unwavering nonsense.">“Main teja hoon kyunki mera naam bhi teja hai.”</li>
-        <li data-m="Damini" data-w="When to use it: If it took you guys weeks of texting and rescheduling to finally pin down an actual date and time.">“Tareekh pe tareekh, tareekh pe tareekh…”</li>
-        <li data-m="Sholay" data-w="When to use it: When he's been rambling adorably about a hyper-specific topic for five minutes straight and you just want to playfully break his train of thought.">“Tumhara naam kya hai Basanti?”</li>
-        <li data-m="Khatta Meetha" data-w="When to use it: When he gives an unsolicited fun fact about the movie you are watching together.">“Puchha kisine? Kisine nahi pucha!”</li>
-        <li data-m="Welcome" data-w="When to use it: When he asks you a secret about your past or how you always manage to win at a specific game.">“Ye raaz bhi ussi ke saath chala gaya.”</li>
-        <li data-m="Jolly LLB" data-w="When to use it: While people-watching at a cafe and observing someone nearby do something completely bizarre.">“Kaun hai ye log? Kahan se aate hain ye?”</li>
-        <li data-m="Queen" data-w="When to use it: Being overly dramatic about a minor inconvenience, like spilling a drop of coffee or dropping a fry.">“Mera to itna life kharab ho gaya.”</li>
-        <li data-m="Piku" data-w="When to use it: Making a philosophical, slightly gross joke when debating whether you should order that extremely heavy, spicy dish.">“Insaan ka motion uska emotion ke saath juda hota hai.”</li>
-        <li data-m="Chup Chup Ke" data-w="When to use it: When he starts trying to guess the twist or what happens next in the movie you are watching.">“Chup bilkul chup!”</li>
-        <li data-m="Bhool Bhulaiyaa" data-w="When to use it: When he shows up exactly five minutes late and you want to playfully guilt-trip him as soon as he sits down.">“Aapne jaldi aane ka kasht kyu kiya?”</li>
-        <li data-m="Dabangg" data-w="When to use it: When you are playfully threatening to beat him at a board game or an arcade game on the date.">“Hum tum mein itne ched karenge ki confuse ho jaoge…”</li>
-        <li data-m="Kick" data-w="When to use it: The perfect mic-drop parting line when you step out of his car or hop into your cab, leaving him completely amused.">“Mere baare mein itna mat sochna, dil mein aata hoon, samajh mein nahi.”</li>
+        <li data-m="Phir Hera Pheri" data-w="When to use it: When that 1:30 AM Swiggy order finally arrives and you are both absolutely starving.">Abhi maza aayega na bhidu.</li>
+        <li data-m="Hera Pheri" data-w="When to use it: When he playfully complains about you overthinking an AI prompt, tweaking an app design for the hundredth time, or being overly meticulous about something small.">Main kya karu phir? Job chhod du?</li>
+        <li data-m="Phir Hera Pheri" data-w="When to use it: When he tries to act tough or protective but immediately gets startled by a bug or a loud noise.">Kya gunda banega re tu.</li>
+        <li data-m="Phir Hera Pheri" data-w="When to use it: If he gets distracted looking at you and accidentally bumps into a table or fumbles his words.">Aurat ka chakkar babu bhaiya, aurat ka chakkar.</li>
+        <li data-m="Munna Bhai M.B.B.S." data-w="When to use it: When you decisively pick the restaurant or the movie for the night and refuse to take no for an answer.">Bhai ne bola karne ka, to karne ka.</li>
+        <li data-m="Vivah" data-w="When to use it: When he's been talking non-stop trying to impress you, and you smoothly slide a glass of water across the table to him.">Jal lijiye… thak gaye honge.</li>
+        <li data-m="Race 3" data-w="When to use it: When a waiter interrupts a deep conversation, or if he asks a cheeky, overly intrusive question and you want to dodge it hilariously.">Our business is our business, none of your business.</li>
+        <li data-m="PK" data-w="When to use it: When he keeps changing the dinner plans or the meeting time at the very last minute.">Hum koi mandir ka ghanta hai ki koi bhi aake baja jata hai?</li>
+        <li data-m="Kabhi Khushi Kabhie Gham" data-w="When to use it: When a sarcastic comment lands a bit too hard and you need to backtrack with maximum Poo energy.">It's a joke, it's a joke!</li>
+        <li data-m="Nagina (and general pop culture)" data-w="When to use it: A spooky, deadpan, and hilarious way to invite him over to your place for the next date.">Aao kabhi haveli pe.</li>
+        <li data-m="Phir Hera Pheri" data-w="When to use it: When he suggests watching a horror movie, or when he tries a really bold, direct pickup line on you.">Mereko to aisa dhak dhak horela hai.</li>
+        <li data-m="Welcome" data-w="When to use it: When he asks if you need anything else from the menu or if you are comfortable.">Bhagwan ka diya sab kuch hai, daulat hai, shauhrat hai, izzat hai…</li>
+        <li data-m="Masaan" data-w="When to use it: When the waiter returns to the table to inform you that your favorite dessert is out of stock.">Saala ye dukh kaahe khatam nahi hota be.</li>
+        <li data-m="Andaz Apna Apna" data-w="When to use it: When he asks a painfully obvious question and you reply with complete, unwavering nonsense.">Main teja hoon kyunki mera naam bhi teja hai.</li>
+        <li data-m="Damini" data-w="When to use it: If it took you guys weeks of texting and rescheduling to finally pin down an actual date and time.">Tareekh pe tareekh, tareekh pe tareekh…</li>
+        <li data-m="Sholay" data-w="When to use it: When he's been rambling adorably about a hyper-specific topic for five minutes straight and you just want to playfully break his train of thought.">Tumhara naam kya hai Basanti?</li>
+        <li data-m="Khatta Meetha" data-w="When to use it: When he gives an unsolicited fun fact about the movie you are watching together.">Puchha kisine? Kisine nahi pucha!</li>
+        <li data-m="Welcome" data-w="When to use it: When he asks you a secret about your past or how you always manage to win at a specific game.">Ye raaz bhi ussi ke saath chala gaya.</li>
+        <li data-m="Jolly LLB" data-w="When to use it: While people-watching at a cafe and observing someone nearby do something completely bizarre.">Kaun hai ye log? Kahan se aate hain ye?</li>
+        <li data-m="Queen" data-w="When to use it: Being overly dramatic about a minor inconvenience, like spilling a drop of coffee or dropping a fry.">Mera to itna life kharab ho gaya.</li>
+        <li data-m="Piku" data-w="When to use it: Making a philosophical, slightly gross joke when debating whether you should order that extremely heavy, spicy dish.">Insaan ka motion uska emotion ke saath juda hota hai.</li>
+        <li data-m="Chup Chup Ke" data-w="When to use it: When he starts trying to guess the twist or what happens next in the movie you are watching.">Chup bilkul chup!</li>
+        <li data-m="Bhool Bhulaiyaa" data-w="When to use it: When he shows up exactly five minutes late and you want to playfully guilt-trip him as soon as he sits down.">Aapne jaldi aane ka kasht kyu kiya?</li>
+        <li data-m="Dabangg" data-w="When to use it: When you are playfully threatening to beat him at a board game or an arcade game on the date.">Hum tum mein itne ched karenge ki confuse ho jaoge…</li>
+        <li data-m="Kick" data-w="When to use it: The perfect mic-drop parting line when you step out of his car or hop into your cab, leaving him completely amused.">Mere baare mein itna mat sochna, dil mein aata hoon, samajh mein nahi.</li>
       </ul>
     </div>
   </details>
@@ -330,46 +372,14 @@
 </footer>
 
 <script>
-const COLORS = ["#ff4d8d","#ff85b3","#ffa8c5","#ff2d6f","#ffd0e0"];
+const $ = id => document.getElementById(id);
 const rand = (a,b) => Math.random()*(b-a)+a;
-const layer = document.getElementById("layer");
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-const svg = (size,color) =>
-  `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" aria-hidden="true">
-     <path d="M12 21s-7.5-4.7-9.6-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.6 12c-2.1 4.3-9.6 9-9.6 9z"/></svg>`;
-
-for (let i = 0; i < 24; i++) {
-  const size = rand(12,34), dur = rand(9,18);
-  const el = document.createElement("div");
-  el.className = "heart";
-  el.style.cssText = `left:${rand(-2,100)}%;animation:rise ${dur}s linear ${-rand(0,dur)}s infinite;
-    --drift:${rand(-90,90)}px;--r0:${rand(-25,25)}deg;--r1:${rand(-120,120)}deg;
-    --s:${rand(.85,1.15)};--o:${rand(.45,.8)}`;
-  el.innerHTML = `<span style="--sw:${rand(8,34)}px;--swayDur:${rand(2.5,5.5)}s">
-    ${svg(size, COLORS[(Math.random()*COLORS.length)|0])}</span>`;
-  layer.appendChild(el);
-}
-
-function burst(x, y) {
-  const wrap = document.createElement("div");
-  wrap.style.cssText = `position:absolute;left:${x}px;top:${y}px`;
-  for (let i = 0; i < 10; i++) {
-    const a = rand(0, Math.PI*2), d = rand(50,140), dur = rand(.7,1.2);
-    const p = document.createElement("div");
-    p.style.cssText = `position:absolute;animation:burst ${dur}s cubic-bezier(.17,.67,.35,1) forwards;
-      --bx:${Math.cos(a)*d}px;--by:${Math.sin(a)*d-40}px;--r1:${rand(-180,180)}deg;--s:${rand(.7,1.2)}`;
-    p.innerHTML = svg(rand(10,22), COLORS[(Math.random()*COLORS.length)|0]);
-    wrap.appendChild(p);
-  }
-  layer.appendChild(wrap);
-  setTimeout(() => wrap.remove(), 1400);
-}
-addEventListener("click", (e) => burst(e.clientX, e.clientY));
 
 // Sound: Web Audio blips, no files to load.
 let ctx;
 function tone(freq, start, len, type = "triangle", vol = .12) {
+  if (!vol) return;
   const o = ctx.createOscillator(), g = ctx.createGain();
   o.type = type; o.frequency.value = freq;
   g.gain.setValueAtTime(vol, ctx.currentTime + start);
@@ -377,32 +387,66 @@ function tone(freq, start, len, type = "triangle", vol = .12) {
   o.connect(g).connect(ctx.destination);
   o.start(ctx.currentTime + start); o.stop(ctx.currentTime + start + len + .02);
 }
-const tick = () => tone(rand(900,1300), 0, .05, "square", .04);
-const chime = () => [1047, 1319, 1568, 2093].forEach((f, i) => tone(f, i * .08, .45, "sine", .1));
+const tick = () => tone(rand(900,1300), 0, .05, "square", .04 * level());
 
-// The visible platter list is the single source of lines.
+// Landing sound: a random clip, shuffled so it doesn't repeat until all have played.
+const CLIPS = ["abhi-maza","duck","indian-song","khopdi-tod","kuch-to-gadbad","laugh","proper-patola","quack","romance"];
+let clipDeck = [], clip;
+function playClip() {
+  if (!clipDeck.length) clipDeck = CLIPS.slice().sort(() => Math.random() - .5);
+  clip = new Audio(`/sounds/${clipDeck.pop()}.mp3`);
+  clip.volume = level();
+  clip.play().catch(() => {});
+}
+const stopClip = () => clip && clip.pause();
+
+// Mute + volume, remembered per browser when storage is available.
+const vol = $("vol"), mute = $("mute");
+try { const v = localStorage.getItem("cp-vol"); if (v !== null) vol.value = v; mute.setAttribute("aria-pressed", localStorage.getItem("cp-muted") === "1"); } catch {}
+const muted = () => mute.getAttribute("aria-pressed") === "true";
+const level = () => muted() ? 0 : +vol.value;
+function syncSound() {
+  mute.textContent = muted() || +vol.value === 0 ? "🔇" : "🔊";
+  mute.setAttribute("aria-label", muted() ? "Unmute sound" : "Mute sound");
+  if (clip) clip.volume = level();
+  try { localStorage.setItem("cp-vol", vol.value); localStorage.setItem("cp-muted", muted() ? "1" : "0"); } catch {}
+}
+mute.addEventListener("click", () => { mute.setAttribute("aria-pressed", !muted()); syncSound(); });
+vol.addEventListener("input", () => { if (muted() && +vol.value > 0) mute.setAttribute("aria-pressed", "false"); syncSound(); });
+syncSound();
+
+// The platter list is the single source of lines.
 const LINES = [...document.querySelectorAll("#platter li")].map(li => ({
   line: li.textContent.trim(), movie: li.dataset.m, when: li.dataset.w
 }));
 let deck = [];
 const draw = () => (deck.length ? deck : (deck = LINES.slice().sort(() => Math.random() - .5))).pop();
 
-const $ = id => document.getElementById(id);
-$("start").addEventListener("click", () => { $("splash").hidden = true; $("app").hidden = false; scrollTo(0, 0); });
-const btn = $("next"), result = $("result");
+// Stable 6–10 score per line, so a line always gets the same cheesiness.
+const cheesiness = s => 6 + [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % 5;
 
 function show(p) {
   $("line").textContent = p.line;
-  $("movie").textContent = p.movie;
-  $("when").textContent = p.when + " 🧀";
+  $("credit").textContent = "— " + p.movie;
+  const m = p.when.match(/^(Vibe|Scenario|When to use it):\s*/);
+  $("label").textContent = m ? m[1] : "When to use it";
+  $("when").textContent = (m ? p.when.slice(m[0].length) : p.when) + " 🧀";
+  const n = cheesiness(p.line);
+  $("meter").innerHTML = "Cheesiness " + Array.from({length:10}, (_, i) => `<i class="${i < n ? "on" : ""}"></i>`).join("") + ` ${n}/10`;
+  $("note").hidden = false;
 }
 
-btn.addEventListener("click", (e) => {
-  e.stopPropagation();
+$("start").addEventListener("click", () => { $("splash").hidden = true; $("app").hidden = false; scrollTo(0, 0); });
+
+const btn = $("next"), result = $("result"), card = $("card");
+btn.addEventListener("click", () => {
   ctx ||= new (window.AudioContext || window.webkitAudioContext)();
   const pick = draw();
-  const r = btn.getBoundingClientRect();
-  const land = () => { result.classList.remove("spinning"); show(pick); chime(); burst(r.left + r.width/2, r.top); btn.disabled = false; };
+  stopClip();
+  const land = () => {
+    result.classList.remove("spinning"); show(pick); playClip(); btn.disabled = false;
+    card.classList.remove("landed"); void card.offsetWidth; card.classList.add("landed");
+  };
   if (reduced) return land();
   btn.disabled = true;
   result.classList.add("spinning");
