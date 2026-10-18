@@ -54,25 +54,33 @@
          background:radial-gradient(120% 90% at 50% 0%, var(--bg2), var(--bg1)) fixed; color:var(--text);
          display:flex; flex-direction:column; align-items:center; padding:16px; overflow-x:hidden; }
   main { flex:1; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 0; position:relative; z-index:2; }
-  h1 { margin:0 0 18px; font-size:clamp(34px,8vw,48px); letter-spacing:-.02em; display:flex; align-items:center; gap:10px; }
-  h1 img { width:1em; height:1em; }
-  .card { position:relative; width:min(460px,100%); background:var(--card); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-          border:1px solid rgba(255,255,255,.14); border-radius:28px; padding:32px 26px; text-align:center;
+  /* Type scale: title 32 > line 26 > scenario 21 > body 17 > meta 13 */
+  h1 { margin:0 0 20px; font-size:22px; font-weight:800; letter-spacing:-.01em; display:flex; align-items:center; gap:8px; }
+  h1 img { width:1.2em; height:1.2em; }
+  .card { position:relative; width:min(440px,100%); background:var(--card); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+          border:1px solid rgba(255,255,255,.14); border-radius:28px; padding:36px 28px; text-align:center;
           box-shadow:0 24px 60px rgba(0,0,0,.45); }
-  .eyebrow { font-size:clamp(26px,6.5vw,34px); font-weight:800; line-height:1.15; letter-spacing:-.01em; color:#fff; margin:0 0 18px; text-wrap:balance; }
-  .result { min-height:210px; display:flex; flex-direction:column; justify-content:center; gap:12px; margin-bottom:24px; }
-  .line { font-size:23px; line-height:1.35; font-weight:600; margin:0; }
-  .movie { margin:0; font-size:14px; font-weight:700; color:var(--cheese); }
-  .when { margin:0; font-size:21px; line-height:1.4; color:var(--cheese); }
+  .title { font-size:clamp(26px,7vw,32px); font-weight:800; line-height:1.15; letter-spacing:-.01em; color:#fff; margin:0; text-wrap:balance; }
+  .result { min-height:200px; display:flex; flex-direction:column; justify-content:center; gap:14px; margin:28px 0; }
+  .line { font-size:26px; line-height:1.3; font-weight:600; margin:0; text-wrap:balance; }
+  .movie { margin:0; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .when { margin:0; font-size:21px; line-height:1.4; color:var(--cheese); text-wrap:pretty; }
+  .when:empty, .movie:empty { display:none; }
   .spinning .line { opacity:.55; filter:blur(.6px); }
   .spinning .movie, .spinning .when { visibility:hidden; }
-  button { font:inherit; font-weight:700; font-size:16px; border:0; cursor:pointer; padding:14px 28px; border-radius:999px;
+  button { font:inherit; font-weight:700; font-size:17px; border:0; cursor:pointer; padding:15px 32px; border-radius:999px;
            color:#3d0620; background:linear-gradient(135deg,#ffd0e0,#ff85b3); box-shadow:0 8px 24px rgba(255,77,141,.35);
            transition:transform .15s ease, opacity .15s; }
   button:active { transform:scale(.96); }
   button:disabled { opacity:.7; cursor:progress; }
   button:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid var(--cheese); outline-offset:3px; }
-  .hint { margin:18px 0 0; font-size:12px; color:var(--muted); opacity:.8; }
+  .splash .lede { font-size:17px; line-height:1.5; color:var(--muted); margin:12px 0 28px; }
+  .steps { list-style:none; margin:0 auto 32px; padding:0; display:grid; gap:14px; width:fit-content; text-align:left; font-size:17px; counter-reset:s; }
+  .steps li { display:flex; align-items:center; gap:12px; counter-increment:s; }
+  .steps li::before { content:counter(s); flex:none; width:28px; height:28px; border-radius:50%; display:grid; place-items:center;
+                      font-size:14px; font-weight:800; color:#3d0620; background:var(--cheese); }
+  .steps strong { color:var(--cheese); }
+  [hidden] { display:none !important; }
 
   details { width:min(720px,100%); margin-top:40px; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:4px 20px; }
   summary { cursor:pointer; padding:14px 0; font-weight:700; color:var(--muted); }
@@ -106,15 +114,27 @@
 <main>
   <h1><img src="/favicon.svg" alt="">Cheese Platter</h1>
 
+  <section class="card splash" id="splash" aria-labelledby="welcome">
+    <h2 class="title" id="welcome">Welcome to the world of Cheese Platter ❤️</h2>
+    <p class="lede">Bollywood pickup lines for your date, and when to use them.</p>
+    <ol class="steps">
+      <li><span>Tap <strong>Find My Cheese</strong></span></li>
+      <li>Read when to say it</li>
+      <li>Use it on your date</li>
+    </ol>
+    <button id="start">Start</button>
+  </section>
+
+  <div id="app" hidden style="width:100%;display:flex;flex-direction:column;align-items:center">
+
   <div class="card">
-    <p class="eyebrow">Tu Cheez Badi Hai Mast Mast</p>
+    <h2 class="title">Tu Cheez Badi Hai Mast Mast</h2>
     <div class="result" id="result" aria-live="polite">
-      <p class="line" id="line">Your date is waiting. Your cheese is too.</p>
+      <p class="line" id="line">Your cheese is waiting.</p>
       <p class="movie" id="movie"></p>
-      <p class="when" id="when">Tap the button for a filmy line — and exactly when to drop it.</p>
+      <p class="when" id="when"></p>
     </div>
     <button id="next">Find My Cheese</button>
-    <p class="hint">Tap anywhere for a heart burst</p>
   </div>
 
   <details>
@@ -297,6 +317,7 @@
       </ul>
     </div>
   </details>
+  </div>
 </main>
 
 <footer>
@@ -367,11 +388,12 @@ let deck = [];
 const draw = () => (deck.length ? deck : (deck = LINES.slice().sort(() => Math.random() - .5))).pop();
 
 const $ = id => document.getElementById(id);
+$("start").addEventListener("click", () => { $("splash").hidden = true; $("app").hidden = false; scrollTo(0, 0); });
 const btn = $("next"), result = $("result");
 
 function show(p) {
   $("line").textContent = p.line;
-  $("movie").textContent = "🎬 " + p.movie;
+  $("movie").textContent = p.movie;
   $("when").textContent = p.when + " 🧀";
 }
 
