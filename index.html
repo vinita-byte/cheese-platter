@@ -63,7 +63,7 @@
   .result { min-height:210px; display:flex; flex-direction:column; justify-content:center; gap:12px; margin-bottom:24px; }
   .line { font-size:23px; line-height:1.35; font-weight:600; margin:0; }
   .movie { margin:0; font-size:14px; font-weight:700; color:var(--cheese); }
-  .when { margin:0; font-size:14px; line-height:1.5; color:var(--muted); }
+  .when { margin:0; font-size:21px; line-height:1.4; color:var(--cheese); }
   .spinning .line { opacity:.55; filter:blur(.6px); }
   .spinning .movie, .spinning .when { visibility:hidden; }
   button { font:inherit; font-weight:700; font-size:16px; border:0; cursor:pointer; padding:14px 28px; border-radius:999px;
@@ -372,7 +372,7 @@ const btn = $("next"), result = $("result");
 function show(p) {
   $("line").textContent = p.line;
   $("movie").textContent = "🎬 " + p.movie;
-  $("when").textContent = p.when;
+  $("when").textContent = p.when + " 🧀";
 }
 
 btn.addEventListener("click", (e) => {
