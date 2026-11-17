@@ -1,4 +1,4 @@
-# Cheese Platter
+# Cheese Platter by vini
 
 > Cheese Platter ("Tu Cheez Badi Hai Mast Mast") is a free web app that serves 116 cheesy Bollywood pickup lines and filmy dialogues for people going on a date. Press "Find My Cheese" to get a random line, the movie it comes from, and exactly when to use it.
 
